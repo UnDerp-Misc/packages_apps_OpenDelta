@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Path deltas are stored, relative to sdcard root -->
+	<string name="path_base">Trình cập nhật</string>
+	<!-- URL base suffix - Used only for download -->
+	<string name="url_base_suffix">/Tải về</string>
+	<string name="official_version_tag">Chính thức</string>
+	<string name="weekly_version_tag">Không chính thức</string>
+	<string name="security_version_tag">BẢO MẬT_PHÁT HÀNH</string>
+</resources>

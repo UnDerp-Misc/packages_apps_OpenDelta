@@ -11,7 +11,7 @@
 	<string name="property_device">ro.derp.device</string>
 
 	<!-- %s is expanded to property_version value. .zip, .delta, .update, .sign extensions added when needed -->
-	<string name="filename_base">DerpFest-%s</string>
+	<string name="filename_base">UnDerp-%s</string>
 
 	<!-- Path deltas are stored, relative to sdcard root -->
 	<string name="path_base">OpenDelta</string>
@@ -23,13 +23,13 @@
 	<string name="url_base_update"></string>
 
 	<!-- URL base to find the full zip files, %s is replaced to be property_device value. -->
-	<string name="url_base_full">https://sourceforge.net/projects/derpfest/files/%s/</string>
+	<string name="url_base_full">https://sourceforge.net/projects/underp/files/%s/</string>
 
 	<!-- URL base suffix - Used only for download -->
 	<string name="url_base_suffix">/download</string>
 
 	<!-- URL base to fetch all builds. %s is replaced by (expanded) property_device -->
-	<string name="url_base_json">https://raw.githubusercontent.com/DerpLab/Updater-Stuff/master/%s/%s.json</string>
+	<string name="url_base_json">https://raw.githubusercontent.com/UnDerp-Misc/Updater-Stuff/master/%s/%s.json</string>
 
 	<!-- Applies whole-file signature delta. Adds one extra delta step. Required if recovery verifies signatures -->
 	<item name="apply_signature" type="bool">false</item>

@@ -1,4 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- updates from 2013/12/18 -->
+    <string name="app_name">Trình cập nhật</string>
+    <string name="title">Cập nhật hệ thống</string>
+    <string name="action_networks">Mạng</string>
+    <string name="title_networks">Tự động tải về với mạng</string>
+    <string name="network_2g" translatable="false" >2G</string>
+    <string name="network_3g" translatable="false" >3G</string>
+    <string name="network_4g" translatable="false" >4G</string>
+    <string name="network_wifi">Wi-Fi</string>
+    <string name="network_ethernet">Có dây</string>
+    <string name="network_unknown">Khác</string>
+    <string name="action_about">Về ứng dụng</string>
+    <string name="about_content" translatable="false" >
+<![CDATA[
+        Copyright &copy; _COPYRIGHT_OPENDELTA_ <b>Jorrit \'Chainfire\' Jongma</b><br>
+        <br>
+        Originally created for <b>The OmniROM Project</b><br>
+        <br>
+        Licensed under the terms of the <b>GNU General Public License, version 3.0 (GPLv3)</b><br>
+        <br>
+        Delta decoding based on <b>xdelta</b>, copyright &copy; _COPYRIGHT_XDELTA_ <b>Joshua MacDonald</b><br>
+    ]]>
+    </string>
+    <string name="state_action_none">Hệ thống của bạn đã được cập nhật</string>
+    <string name="state_action_checking">Đang kiểm tra cập nhật cho &#8230;</string>
+    <string name="state_action_checking_md5">Đang xác minh tập tin &#8230;</string>
+    <string name="state_action_searching">Đang tìm kiếm tập tin &#8230;</string>
+    <string name="state_action_searching_md5">Đang xác minh tập tin &#8230;</string>
+    <string name="state_action_downloading">Đang tải về &#8230;</string>
+    <string name="state_action_applying">Đang vá &#8230;</string>
+    <string name="state_action_applying_patch">Đang áp dụng bản vá &#8230;</string>
+    <string name="state_action_applying_md5">Đang xác minh tập tin &#8230;</string>
+    <string name="state_action_ready">Cập nhật đã sẵn sàng để cài đặt</string>
+    <string name="state_error_disk_space">Không đủ dung lượng lưu trữ</string>
+    <string name="state_error_unknown">Lỗi không rõ</string>
+    <string name="state_error_unofficial">Cập nhật bị vô hiệu hóa</string>
+    <string name="error_disk_space_sub" formatted="false">%d MiB Có sẵn, %d MiB yêu cầu</string>
+    <string name="notify_update_available">Có sẵn một bản cập nhật</string>
+    <string name="notify_checking">Đang kiểm tra cập nhật &#8230;</string>
+    <string name="last_checked" formatted="false">%s tại %s</string>
+    <string name="last_checked_never">Chúng tôi chưa bao giờ kiểm tra, có lẽ bạn muốn làm như vậy?</string>
+    <string name="button_check_short">Kiểm tra</string>
+    <string name="button_check_now">Kiểm tra cập nhật &#8230;</string>
+    <string name="button_flash_now">Cài đặt</string>
+    <string name="state_action_ab_flash">Đang cài đặt bản cập nhật AB &#8230;</string>
+    <string name="state_action_ab_finished">Cài đặt xong. Khởi động lại ngay &#8230;</string>
+    <string name="button_reboot_short">Khởi động</string>
+    <string name="action_secure_mode">An toàn</string>
+    <string name="secure_mode_enabled_title">Chế độ an toàn: Đã kích hoạt</string>
+    <string name="secure_mode_enabled_description"><![CDATA[Chữ ký mã hóa của bản cập nhật sẽ được xác minh trước khi flash để xác nhận nguồn gốc của nó và không có bản cập nhật bổ sung nào sẽ được flash. Chế độ này chỉ tương thích với <b>TWRP</b>.]]></string>
+    <string name="secure_mode_disabled_title">Chế độ an toàn: Đã vô hiệu hóa</string>
+    <string name="secure_mode_disabled_description"><![CDATA[Cập nhật bổ sung được flash nếu có. Lưu ý rằng mọi gói phần mềm (độc hại) đều có thể đặt các bản cập nhật này và có quyền truy cập toàn hệ thống. Cần thận trọng.]]></string>
+    <string name="recovery_notice_title">Chú ý</string>
+    <string name="recovery_notice_description_secure"><![CDATA[Cập nhật flash trong chế độ hiện tại chỉ được hỗ trợ trên các phục hồi <b> TWRP </ b>. Vui lòng đảm bảo rằng bạn đang chạy một phục hồi tương thích trước khi tiếp tục.]]></string>
+    <string name="recovery_notice_description_not_secure"><![CDATA[Các cập nhật flash trong chế độ hiện tại chỉ được hỗ trợ chính thức trên các phục hồi <b> TWRP </b>. <i>Chính thức</i> <b>CWM</b> bản dựng là <i>not</i> Được hỗ trợ, mặc dù một số <i>xây dựng cộng đồng</i> phiên bản của <b>CWM</b> <i>may</i> vẫn làm việc. Vui lòng đảm bảo rằng bạn đang chạy một phục hồi tương thích trước khi tiếp tục.]]></string>
+    <string name="flash_after_update_notice_title">Chú ý</string>
+    <string name="flash_after_update_notice_description"><![CDATA[Cập nhật bổ sung có mặt trong thư mục <b>FlashAfterUpdate</b>, nhưng chế độ bảo mật được kích hoạt. Nếu bạn tiếp tục, những cập nhật bổ sung này sẽ <b>không</b> được flash.]]></string>
+    <string name="state_error_not_official_title">Cập nhật bị vô hiệu hóa</string>
+    <string name="state_error_not_official_extra" formatted="false">Không thể cập nhật %</string>
+    <string name="button_build_delta">Tải về</string>
+    <string name="button_stop">Dừng</string>
+    <string name="state_action_build">Cập nhật có sẵn</string>
+    <string name="state_action_build_delta">Có thể cập nhật Delta</string>
+    <string name="state_action_build_full">Có thể cập nhật đầy đủ</string>
+    <string name="state_error_download">Vấn đề tải xuống</string>
+    <string name="text_current_version_header_title">Phiên bản hiện tại</string>
+    <string name="text_last_checked_header_title">Kiểm tra lần cuối</string>
+    <string name="text_update_version_title">Cập nhật phiên bản</string>
+    <string name="text_download_size_header_title">Kích cỡ tải về</string>
+    <string name="text_download_size_unknown">Không rõ</string>
+    <string name="auto_download">Lịch trình</string>
+    <string name="auto_download_title">Lịch trình thực hiện</string>
+    <string name="download_disabled">Vô hiệu hóa</string>
+    <string name="check_only">Kiểm tra và thông báo</string>
+    <string name="download_delta">Tải về delta tự động</string>
+    <string name="download_full">Tự động tải về tất cả</string>
+    <string name="menu_settings">Cài đặt</string>
+    <string name="menu_changelog">Các thay đổi</string>
+    <string name="category_download">Tự động tải về</string>
+    <string name="charge_only_title">Chỉ sạc</string>
+    <string name="charge_only_message">Chỉ tự động tải về khi sạc</string>
+    <string name="battery_level_title">Phần trăm pin tối thiểu</string>
+    <string name="twenty_five_percent" translatable="false" >25</string>
+    <string name="fifty_percent" translatable="false" >50</string>
+    <string name="seventy_five_percent" translatable="false" >75</string>
+    <string name="notify_title_error">Có vấn đề trong khi kiểm tra cập nhật</string>
+    <string name="notify_title_flash">Cập nhật đã sẵn sàng để cài đặt</string>
+    <string name="notify_title_download">Cập nhật sẵn sàng để tải về</string>
+    <string name="notify_eta_remaining"  formatted="false">%2d%%, %02d:%02d còn lại</string>
+    <string name="last_checked_never_title_new">Nhấn \'Kiểm tra\' để bắt đầu</string>
+    <string name="screen_state_title">Màn hình tắt</string>
+    <string name="screen_state_message">Chỉ tải về tự động khi màn hình tắt</string>
+    <string name="category_scheduler">Tự động cập nhật</string>
+    <string name="scheduler_mode_title">Chế độ lịch trình</string>
+    <string name="scheduler_smart">Thông minh</string>
+    <string name="scheduler_daily">Hàng ngày</string>
+    <string name="scheduler_weekly">Hàng tuần</string>
+    <string name="scheduler_daily_time">Thời gian</string>
+    <string name="scheduler_week_day">Ngày</string>
+    <string name="networks_title">Mạng</string>
+    <string name="networks_message">Chỉ tải xuống trên các loại mạng</string>
+    <string name="category_flashing">Đang cài đặt</string>
+    <string name="secure_mode_title">Chế độ an toàn</string>
+    <string name="state_error_connection">Không có dữ liệu kết nối.</string>
+    <string name="category_admin">Bảo trì</string>
+    <string name="clear_files_title">Làm sạch các tập tin cập nhật</string>
+    <string name="clear_files_summary">Xóa các tệp cập nhật hiện có để buộc tải xuống bản cập nhật đầy đủ</string>
+    <string name="clean_files_feedback" formatted="false">Đã xóa %d tập tin. Giờ hãy nhấn \'Kiểm tra cập nhật\'</string>
+    <string name="state_error_permissions">Không có quyền lưu trữ.</string>
+    <string name="state_error_flash">Không thể thiết lập flash. Làm sạch bộ nhớ cache và thử lại.</string>
+    <string name="state_error_ab_flash">Không thể thiết lập flash. Vui lòng khởi động và thử lại.</string>
+    <string name="progress_status_0">Nhàn rỗi &#8230;</string>
+    <string name="progress_status_1">Đang kiểm tra cập nhật &#8230;</string>
+    <string name="progress_status_2">Cập nhật có sẵn &#8230;</string>
+    <string name="progress_status_3">Đang cài đặt &#8230;</string>
+    <string name="progress_status_4">Đang xác minh &#8230;</string>
+    <string name="progress_status_5">Đang hoàn thiện &#8230;</string>
+    <string name="progress_status_6">Đã cập nhật. Đợi khởi động lại &#8230;</string>
+    <string name="progress_status_7">Sự kiện báo cáo lỗi &#8230;</string>
+    <string name="progress_status_8">cố gắng Rollback &#8230;</string>
+    <string name="progress_status_9">Đã vô hiệu hóa.</string>
+    <string name="ab_perf_mode_title">Chế độ hiệu suất AB</string>
+    <string name="ab_perf_mode_summary_new">Tăng mức độ ưu tiên của quá trình cập nhật. Có thể ảnh hưởng đến việc sử dụng bình thường trong khi cập nhật.</string>
+    <string name="state_error_flash_file_title">Không thể flash tập tin đó</string>
+    <string name="select_file_activity_title">Chọn tập tin zin</string>
+    <string name="button_select_file">Tập tin</string>
+    <string name="state_error_ab_flash_title">Không thể cập nhật AB</string>
+    <string name="state_error_flash_title">Không thể flash cập nhật</string>
+    <string name="file_flash_support_title">Flash tập tin cục bộ</string>
+    <string name="file_flash_support_summary">Cho phép chọn tệp ZIP cục bộ</string>
+    <string name="flash_file_notice_title">Tập tin flash cục bộ</string>
+    <string name="flash_file_notice_message"><b>Chú ý:</b> Sẽ không có kiểm tra nếu tệp ZIP được chọn có phù hợp với thiết bị của bạn hay không!\n\n<b> Nhấp nháy sai tệp tin zip có thể dẫn đến một thiết bị không có chức năng!</b></string>
+    <string name="channel_name">Tiến độ cập nhật</string>
+    <string name="channel_description"></string>
+    <string name="text_update_file_flash_title">Cập nhật tập tin</string>
 </resources>
